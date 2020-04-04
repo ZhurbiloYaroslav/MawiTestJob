@@ -20,6 +20,7 @@
 		C4F92E332438A33300657F5E /* MeasurementNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E322438A33300657F5E /* MeasurementNewViewController.swift */; };
 		C4F92E352438A34000657F5E /* MeasurementNewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E342438A34000657F5E /* MeasurementNewViewModel.swift */; };
 		C4F92E372438A44B00657F5E /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E362438A44B00657F5E /* SessionService.swift */; };
+		C4F92E3A2438C06900657F5E /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E392438C06900657F5E /* BaseCoordinator.swift */; };
 		C4FE93ED2438978E00F167B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE93EC2438978E00F167B9 /* AppDelegate.swift */; };
 		C4FE93F62438979400F167B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F52438979400F167B9 /* Assets.xcassets */; };
 		C4FE93F92438979400F167B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F72438979400F167B9 /* LaunchScreen.storyboard */; };
@@ -55,6 +56,7 @@
 		C4F92E322438A33300657F5E /* MeasurementNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementNewViewController.swift; sourceTree = "<group>"; };
 		C4F92E342438A34000657F5E /* MeasurementNewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementNewViewModel.swift; sourceTree = "<group>"; };
 		C4F92E362438A44B00657F5E /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
+		C4F92E392438C06900657F5E /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		C4FE93E92438978E00F167B9 /* MawiTestJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MawiTestJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FE93EC2438978E00F167B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4FE93F52438979400F167B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -179,6 +181,14 @@
 			path = MeasurementNew;
 			sourceTree = "<group>";
 		};
+		C4F92E382438C05000657F5E /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				C4F92E392438C06900657F5E /* BaseCoordinator.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		C4FE93E02438978E00F167B9 = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +215,7 @@
 				C4FE93EC2438978E00F167B9 /* AppDelegate.swift */,
 				C4F92E1D24389C6C00657F5E /* AppCoordinator.swift */,
 				C4F92E1A24389BA700657F5E /* DI */,
+				C4F92E382438C05000657F5E /* Base */,
 				C4F92E1924389B9700657F5E /* Services */,
 				C4F92E1824389B8C00657F5E /* Resources */,
 				C4F92E1724389B8100657F5E /* Configuration */,
@@ -418,6 +429,7 @@
 				C4F92E1C24389C4300657F5E /* AppDependencyContainer.swift in Sources */,
 				C4F92E2F2438A30100657F5E /* MeasurementListViewModel.swift in Sources */,
 				C4F92E232438A21F00657F5E /* RootViewController.swift in Sources */,
+				C4F92E3A2438C06900657F5E /* BaseCoordinator.swift in Sources */,
 				C4F92E272438A26600657F5E /* RootCoordinator.swift in Sources */,
 				C4FE93ED2438978E00F167B9 /* AppDelegate.swift in Sources */,
 			);
