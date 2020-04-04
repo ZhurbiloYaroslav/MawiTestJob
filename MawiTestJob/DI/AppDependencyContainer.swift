@@ -7,7 +7,18 @@
 //
 
 import Foundation
+import Swinject
 
 class AppDependencyContainer {
+    private lazy var appDIContainer: Container = {
+        Container { container in
+            container.register(RootDIContainer.self) { resolver -> RootDIContainer in
+                RootDIContainer(parentContainer: container)
+            }
+        }
+    }()
     
+    func makeRootCoordinator() -> RootCoordinator {
+        appDIContainer.resolve(RootDIContainer.self)!.makeRootCoordinator()
+    }
 }

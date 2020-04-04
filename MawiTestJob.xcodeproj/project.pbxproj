@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9205561274CBE99A417B0769 /* Pods_MawiTestJob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE37D10B7577F3DA23B84115 /* Pods_MawiTestJob.framework */; };
 		C4F92E1C24389C4300657F5E /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E1B24389C4300657F5E /* AppDependencyContainer.swift */; };
-		C4F92E1E24389C6C00657F5E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E1D24389C6C00657F5E /* AppCoordinator.swift */; };
 		C4F92E232438A21F00657F5E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E222438A21F00657F5E /* RootViewController.swift */; };
 		C4F92E252438A24700657F5E /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E242438A24700657F5E /* RootViewModel.swift */; };
 		C4F92E272438A26600657F5E /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E262438A26600657F5E /* RootCoordinator.swift */; };
@@ -21,6 +20,12 @@
 		C4F92E352438A34000657F5E /* MeasurementNewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E342438A34000657F5E /* MeasurementNewViewModel.swift */; };
 		C4F92E372438A44B00657F5E /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E362438A44B00657F5E /* SessionService.swift */; };
 		C4F92E3A2438C06900657F5E /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E392438C06900657F5E /* BaseCoordinator.swift */; };
+		C4F92E3E2438C2C100657F5E /* Measurement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E3D2438C2C100657F5E /* Measurement.swift */; };
+		C4F92E412438C98A00657F5E /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E402438C98A00657F5E /* Presentable.swift */; };
+		C4F92E442438C9DA00657F5E /* UIViewController+presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E432438C9DA00657F5E /* UIViewController+presentable.swift */; };
+		C4F92E462438D35400657F5E /* RootDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E452438D35400657F5E /* RootDIContainer.swift */; };
+		C4F92E482438DE3700657F5E /* UIWindowConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E472438DE3700657F5E /* UIWindowConfigurable.swift */; };
+		C4F92E4A2438EAE400657F5E /* MeasurementListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E492438EAE400657F5E /* MeasurementListContainer.swift */; };
 		C4FE93ED2438978E00F167B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE93EC2438978E00F167B9 /* AppDelegate.swift */; };
 		C4FE93F62438979400F167B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F52438979400F167B9 /* Assets.xcassets */; };
 		C4FE93F92438979400F167B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F72438979400F167B9 /* LaunchScreen.storyboard */; };
@@ -45,7 +50,6 @@
 		744722A78EEA096D5B767608 /* Pods-MawiTestJob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MawiTestJob.release.xcconfig"; path = "Target Support Files/Pods-MawiTestJob/Pods-MawiTestJob.release.xcconfig"; sourceTree = "<group>"; };
 		8A901FA43F7F71C4CDE482B6 /* Pods-MawiTestJob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MawiTestJob.debug.xcconfig"; path = "Target Support Files/Pods-MawiTestJob/Pods-MawiTestJob.debug.xcconfig"; sourceTree = "<group>"; };
 		C4F92E1B24389C4300657F5E /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
-		C4F92E1D24389C6C00657F5E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C4F92E222438A21F00657F5E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		C4F92E242438A24700657F5E /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
 		C4F92E262438A26600657F5E /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
@@ -57,6 +61,12 @@
 		C4F92E342438A34000657F5E /* MeasurementNewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementNewViewModel.swift; sourceTree = "<group>"; };
 		C4F92E362438A44B00657F5E /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		C4F92E392438C06900657F5E /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		C4F92E3D2438C2C100657F5E /* Measurement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Measurement.swift; sourceTree = "<group>"; };
+		C4F92E402438C98A00657F5E /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		C4F92E432438C9DA00657F5E /* UIViewController+presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+presentable.swift"; sourceTree = "<group>"; };
+		C4F92E452438D35400657F5E /* RootDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDIContainer.swift; sourceTree = "<group>"; };
+		C4F92E472438DE3700657F5E /* UIWindowConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowConfigurable.swift; sourceTree = "<group>"; };
+		C4F92E492438EAE400657F5E /* MeasurementListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementListContainer.swift; sourceTree = "<group>"; };
 		C4FE93E92438978E00F167B9 /* MawiTestJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MawiTestJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FE93EC2438978E00F167B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4FE93F52438979400F167B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -147,6 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				C4F92E1B24389C4300657F5E /* AppDependencyContainer.swift */,
+				C4F92E452438D35400657F5E /* RootDIContainer.swift */,
+				C4F92E492438EAE400657F5E /* MeasurementListContainer.swift */,
 			);
 			path = DI;
 			sourceTree = "<group>";
@@ -189,6 +201,39 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		C4F92E3B2438C2A800657F5E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C4F92E3C2438C2B200657F5E /* Measurement */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C4F92E3C2438C2B200657F5E /* Measurement */ = {
+			isa = PBXGroup;
+			children = (
+				C4F92E3D2438C2C100657F5E /* Measurement.swift */,
+			);
+			path = Measurement;
+			sourceTree = "<group>";
+		};
+		C4F92E3F2438C97B00657F5E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C4F92E402438C98A00657F5E /* Presentable.swift */,
+				C4F92E472438DE3700657F5E /* UIWindowConfigurable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C4F92E422438C9C200657F5E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C4F92E432438C9DA00657F5E /* UIViewController+presentable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C4FE93E02438978E00F167B9 = {
 			isa = PBXGroup;
 			children = (
@@ -213,12 +258,14 @@
 			isa = PBXGroup;
 			children = (
 				C4FE93EC2438978E00F167B9 /* AppDelegate.swift */,
-				C4F92E1D24389C6C00657F5E /* AppCoordinator.swift */,
 				C4F92E1A24389BA700657F5E /* DI */,
+				C4F92E3F2438C97B00657F5E /* Protocols */,
+				C4F92E422438C9C200657F5E /* Extensions */,
 				C4F92E382438C05000657F5E /* Base */,
 				C4F92E1924389B9700657F5E /* Services */,
 				C4F92E1824389B8C00657F5E /* Resources */,
 				C4F92E1724389B8100657F5E /* Configuration */,
+				C4F92E3B2438C2A800657F5E /* Models */,
 				C4F92E1624389B7300657F5E /* Scenes */,
 			);
 			path = MawiTestJob;
@@ -418,18 +465,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F92E482438DE3700657F5E /* UIWindowConfigurable.swift in Sources */,
 				C4F92E352438A34000657F5E /* MeasurementNewViewModel.swift in Sources */,
+				C4F92E412438C98A00657F5E /* Presentable.swift in Sources */,
 				C4F92E332438A33300657F5E /* MeasurementNewViewController.swift in Sources */,
+				C4F92E3E2438C2C100657F5E /* Measurement.swift in Sources */,
 				C4F92E252438A24700657F5E /* RootViewModel.swift in Sources */,
-				C4F92E1E24389C6C00657F5E /* AppCoordinator.swift in Sources */,
 				C4F92E2D2438A2D600657F5E /* MeasurementListCoordinator.swift in Sources */,
 				C4F92E2B2438A2BF00657F5E /* MeasurementListViewController.swift in Sources */,
 				C4F92E312438A31F00657F5E /* MeasurementNewCoordinator.swift in Sources */,
+				C4F92E4A2438EAE400657F5E /* MeasurementListContainer.swift in Sources */,
 				C4F92E372438A44B00657F5E /* SessionService.swift in Sources */,
+				C4F92E462438D35400657F5E /* RootDIContainer.swift in Sources */,
 				C4F92E1C24389C4300657F5E /* AppDependencyContainer.swift in Sources */,
 				C4F92E2F2438A30100657F5E /* MeasurementListViewModel.swift in Sources */,
 				C4F92E232438A21F00657F5E /* RootViewController.swift in Sources */,
 				C4F92E3A2438C06900657F5E /* BaseCoordinator.swift in Sources */,
+				C4F92E442438C9DA00657F5E /* UIViewController+presentable.swift in Sources */,
 				C4F92E272438A26600657F5E /* RootCoordinator.swift in Sources */,
 				C4FE93ED2438978E00F167B9 /* AppDelegate.swift in Sources */,
 			);
