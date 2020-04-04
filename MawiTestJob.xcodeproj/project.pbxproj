@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C4F92E1C24389C4300657F5E /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E1B24389C4300657F5E /* AppDependencyContainer.swift */; };
+		C4F92E1E24389C6C00657F5E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E1D24389C6C00657F5E /* AppCoordinator.swift */; };
 		C4FE93ED2438978E00F167B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE93EC2438978E00F167B9 /* AppDelegate.swift */; };
 		C4FE93F62438979400F167B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F52438979400F167B9 /* Assets.xcassets */; };
 		C4FE93F92438979400F167B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F72438979400F167B9 /* LaunchScreen.storyboard */; };
@@ -24,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C4F92E1B24389C4300657F5E /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
+		C4F92E1D24389C6C00657F5E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C4FE93E92438978E00F167B9 /* MawiTestJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MawiTestJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FE93EC2438978E00F167B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4FE93F52438979400F167B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,6 +56,69 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C4F92E1624389B7300657F5E /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				C4F92E1F24389FA900657F5E /* Root */,
+				C4F92E2024389FB100657F5E /* MeasurementList */,
+				C4F92E2124389FD100657F5E /* MeasurementNew */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		C4F92E1724389B8100657F5E /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				C4FE93FA2438979400F167B9 /* Info.plist */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		C4F92E1824389B8C00657F5E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C4FE93F52438979400F167B9 /* Assets.xcassets */,
+				C4FE93F72438979400F167B9 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C4F92E1924389B9700657F5E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C4F92E1A24389BA700657F5E /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				C4F92E1B24389C4300657F5E /* AppDependencyContainer.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		C4F92E1F24389FA900657F5E /* Root */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		C4F92E2024389FB100657F5E /* MeasurementList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MeasurementList;
+			sourceTree = "<group>";
+		};
+		C4F92E2124389FD100657F5E /* MeasurementNew */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MeasurementNew;
+			sourceTree = "<group>";
+		};
 		C4FE93E02438978E00F167B9 = {
 			isa = PBXGroup;
 			children = (
@@ -74,9 +141,12 @@
 			isa = PBXGroup;
 			children = (
 				C4FE93EC2438978E00F167B9 /* AppDelegate.swift */,
-				C4FE93F52438979400F167B9 /* Assets.xcassets */,
-				C4FE93F72438979400F167B9 /* LaunchScreen.storyboard */,
-				C4FE93FA2438979400F167B9 /* Info.plist */,
+				C4F92E1D24389C6C00657F5E /* AppCoordinator.swift */,
+				C4F92E1A24389BA700657F5E /* DI */,
+				C4F92E1924389B9700657F5E /* Services */,
+				C4F92E1824389B8C00657F5E /* Resources */,
+				C4F92E1724389B8100657F5E /* Configuration */,
+				C4F92E1624389B7300657F5E /* Scenes */,
 			);
 			path = MawiTestJob;
 			sourceTree = "<group>";
@@ -190,6 +260,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F92E1E24389C6C00657F5E /* AppCoordinator.swift in Sources */,
+				C4F92E1C24389C4300657F5E /* AppDependencyContainer.swift in Sources */,
 				C4FE93ED2438978E00F167B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,7 +416,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PM46468DE;
-				INFOPLIST_FILE = MawiTestJob/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MawiTestJob/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,7 +435,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PM46468DE;
-				INFOPLIST_FILE = MawiTestJob/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MawiTestJob/Configuration/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
