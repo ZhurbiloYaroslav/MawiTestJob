@@ -9,6 +9,16 @@
 /* Begin PBXBuildFile section */
 		C4F92E1C24389C4300657F5E /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E1B24389C4300657F5E /* AppDependencyContainer.swift */; };
 		C4F92E1E24389C6C00657F5E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E1D24389C6C00657F5E /* AppCoordinator.swift */; };
+		C4F92E232438A21F00657F5E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E222438A21F00657F5E /* RootViewController.swift */; };
+		C4F92E252438A24700657F5E /* RootViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E242438A24700657F5E /* RootViewModel.swift */; };
+		C4F92E272438A26600657F5E /* RootCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E262438A26600657F5E /* RootCoordinator.swift */; };
+		C4F92E2B2438A2BF00657F5E /* MeasurementListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E2A2438A2BF00657F5E /* MeasurementListViewController.swift */; };
+		C4F92E2D2438A2D600657F5E /* MeasurementListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E2C2438A2D600657F5E /* MeasurementListCoordinator.swift */; };
+		C4F92E2F2438A30100657F5E /* MeasurementListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E2E2438A30100657F5E /* MeasurementListViewModel.swift */; };
+		C4F92E312438A31F00657F5E /* MeasurementNewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E302438A31F00657F5E /* MeasurementNewCoordinator.swift */; };
+		C4F92E332438A33300657F5E /* MeasurementNewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E322438A33300657F5E /* MeasurementNewViewController.swift */; };
+		C4F92E352438A34000657F5E /* MeasurementNewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E342438A34000657F5E /* MeasurementNewViewModel.swift */; };
+		C4F92E372438A44B00657F5E /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E362438A44B00657F5E /* SessionService.swift */; };
 		C4FE93ED2438978E00F167B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE93EC2438978E00F167B9 /* AppDelegate.swift */; };
 		C4FE93F62438979400F167B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F52438979400F167B9 /* Assets.xcassets */; };
 		C4FE93F92438979400F167B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F72438979400F167B9 /* LaunchScreen.storyboard */; };
@@ -28,6 +38,16 @@
 /* Begin PBXFileReference section */
 		C4F92E1B24389C4300657F5E /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
 		C4F92E1D24389C6C00657F5E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		C4F92E222438A21F00657F5E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		C4F92E242438A24700657F5E /* RootViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewModel.swift; sourceTree = "<group>"; };
+		C4F92E262438A26600657F5E /* RootCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootCoordinator.swift; sourceTree = "<group>"; };
+		C4F92E2A2438A2BF00657F5E /* MeasurementListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementListViewController.swift; sourceTree = "<group>"; };
+		C4F92E2C2438A2D600657F5E /* MeasurementListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementListCoordinator.swift; sourceTree = "<group>"; };
+		C4F92E2E2438A30100657F5E /* MeasurementListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementListViewModel.swift; sourceTree = "<group>"; };
+		C4F92E302438A31F00657F5E /* MeasurementNewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementNewCoordinator.swift; sourceTree = "<group>"; };
+		C4F92E322438A33300657F5E /* MeasurementNewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementNewViewController.swift; sourceTree = "<group>"; };
+		C4F92E342438A34000657F5E /* MeasurementNewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementNewViewModel.swift; sourceTree = "<group>"; };
+		C4F92E362438A44B00657F5E /* SessionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		C4FE93E92438978E00F167B9 /* MawiTestJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MawiTestJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FE93EC2438978E00F167B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4FE93F52438979400F167B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -86,6 +106,7 @@
 		C4F92E1924389B9700657F5E /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C4F92E362438A44B00657F5E /* SessionService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -101,6 +122,9 @@
 		C4F92E1F24389FA900657F5E /* Root */ = {
 			isa = PBXGroup;
 			children = (
+				C4F92E262438A26600657F5E /* RootCoordinator.swift */,
+				C4F92E222438A21F00657F5E /* RootViewController.swift */,
+				C4F92E242438A24700657F5E /* RootViewModel.swift */,
 			);
 			path = Root;
 			sourceTree = "<group>";
@@ -108,6 +132,9 @@
 		C4F92E2024389FB100657F5E /* MeasurementList */ = {
 			isa = PBXGroup;
 			children = (
+				C4F92E2C2438A2D600657F5E /* MeasurementListCoordinator.swift */,
+				C4F92E2A2438A2BF00657F5E /* MeasurementListViewController.swift */,
+				C4F92E2E2438A30100657F5E /* MeasurementListViewModel.swift */,
 			);
 			path = MeasurementList;
 			sourceTree = "<group>";
@@ -115,6 +142,9 @@
 		C4F92E2124389FD100657F5E /* MeasurementNew */ = {
 			isa = PBXGroup;
 			children = (
+				C4F92E302438A31F00657F5E /* MeasurementNewCoordinator.swift */,
+				C4F92E322438A33300657F5E /* MeasurementNewViewController.swift */,
+				C4F92E342438A34000657F5E /* MeasurementNewViewModel.swift */,
 			);
 			path = MeasurementNew;
 			sourceTree = "<group>";
@@ -260,8 +290,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4F92E352438A34000657F5E /* MeasurementNewViewModel.swift in Sources */,
+				C4F92E332438A33300657F5E /* MeasurementNewViewController.swift in Sources */,
+				C4F92E252438A24700657F5E /* RootViewModel.swift in Sources */,
 				C4F92E1E24389C6C00657F5E /* AppCoordinator.swift in Sources */,
+				C4F92E2D2438A2D600657F5E /* MeasurementListCoordinator.swift in Sources */,
+				C4F92E2B2438A2BF00657F5E /* MeasurementListViewController.swift in Sources */,
+				C4F92E312438A31F00657F5E /* MeasurementNewCoordinator.swift in Sources */,
+				C4F92E372438A44B00657F5E /* SessionService.swift in Sources */,
 				C4F92E1C24389C4300657F5E /* AppDependencyContainer.swift in Sources */,
+				C4F92E2F2438A30100657F5E /* MeasurementListViewModel.swift in Sources */,
+				C4F92E232438A21F00657F5E /* RootViewController.swift in Sources */,
+				C4F92E272438A26600657F5E /* RootCoordinator.swift in Sources */,
 				C4FE93ED2438978E00F167B9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
