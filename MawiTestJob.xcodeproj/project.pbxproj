@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		C4FE93ED2438978E00F167B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE93EC2438978E00F167B9 /* AppDelegate.swift */; };
-		C4FE93EF2438978E00F167B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE93EE2438978E00F167B9 /* SceneDelegate.swift */; };
-		C4FE93F12438978E00F167B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE93F02438978E00F167B9 /* ViewController.swift */; };
-		C4FE93F42438978E00F167B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F22438978E00F167B9 /* Main.storyboard */; };
 		C4FE93F62438979400F167B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F52438979400F167B9 /* Assets.xcassets */; };
 		C4FE93F92438979400F167B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F72438979400F167B9 /* LaunchScreen.storyboard */; };
 		C4FE94042438979400F167B9 /* MawiTestJobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE94032438979400F167B9 /* MawiTestJobTests.swift */; };
@@ -29,9 +26,6 @@
 /* Begin PBXFileReference section */
 		C4FE93E92438978E00F167B9 /* MawiTestJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MawiTestJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FE93EC2438978E00F167B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C4FE93EE2438978E00F167B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C4FE93F02438978E00F167B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C4FE93F32438978E00F167B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C4FE93F52438979400F167B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4FE93F82438979400F167B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4FE93FA2438979400F167B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -80,9 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				C4FE93EC2438978E00F167B9 /* AppDelegate.swift */,
-				C4FE93EE2438978E00F167B9 /* SceneDelegate.swift */,
-				C4FE93F02438978E00F167B9 /* ViewController.swift */,
-				C4FE93F22438978E00F167B9 /* Main.storyboard */,
 				C4FE93F52438979400F167B9 /* Assets.xcassets */,
 				C4FE93F72438979400F167B9 /* LaunchScreen.storyboard */,
 				C4FE93FA2438979400F167B9 /* Info.plist */,
@@ -182,7 +173,6 @@
 			files = (
 				C4FE93F92438979400F167B9 /* LaunchScreen.storyboard in Resources */,
 				C4FE93F62438979400F167B9 /* Assets.xcassets in Resources */,
-				C4FE93F42438978E00F167B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -200,9 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4FE93F12438978E00F167B9 /* ViewController.swift in Sources */,
 				C4FE93ED2438978E00F167B9 /* AppDelegate.swift in Sources */,
-				C4FE93EF2438978E00F167B9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,14 +213,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C4FE93F22438978E00F167B9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4FE93F32438978E00F167B9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C4FE93F72438979400F167B9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -369,10 +349,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yaroslav.zhurbilo.MawiTestJob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -387,10 +368,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.yaroslav.zhurbilo.MawiTestJob;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
