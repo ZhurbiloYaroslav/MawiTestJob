@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9205561274CBE99A417B0769 /* Pods_MawiTestJob.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE37D10B7577F3DA23B84115 /* Pods_MawiTestJob.framework */; };
 		C4F92E1C24389C4300657F5E /* AppDependencyContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E1B24389C4300657F5E /* AppDependencyContainer.swift */; };
 		C4F92E1E24389C6C00657F5E /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E1D24389C6C00657F5E /* AppCoordinator.swift */; };
 		C4F92E232438A21F00657F5E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E222438A21F00657F5E /* RootViewController.swift */; };
@@ -23,6 +24,7 @@
 		C4FE93F62438979400F167B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F52438979400F167B9 /* Assets.xcassets */; };
 		C4FE93F92438979400F167B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F72438979400F167B9 /* LaunchScreen.storyboard */; };
 		C4FE94042438979400F167B9 /* MawiTestJobTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE94032438979400F167B9 /* MawiTestJobTests.swift */; };
+		DCED31D34718E92D7A6620E6 /* Pods_MawiTestJobTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51D94B8988AF13BDAAA7B0CD /* Pods_MawiTestJobTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CB26265C2ADC37D5FA06721 /* Pods-MawiTestJobTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MawiTestJobTests.debug.xcconfig"; path = "Target Support Files/Pods-MawiTestJobTests/Pods-MawiTestJobTests.debug.xcconfig"; sourceTree = "<group>"; };
+		432B289AF63AA452E6073F98 /* Pods-MawiTestJobTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MawiTestJobTests.release.xcconfig"; path = "Target Support Files/Pods-MawiTestJobTests/Pods-MawiTestJobTests.release.xcconfig"; sourceTree = "<group>"; };
+		51D94B8988AF13BDAAA7B0CD /* Pods_MawiTestJobTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MawiTestJobTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		744722A78EEA096D5B767608 /* Pods-MawiTestJob.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MawiTestJob.release.xcconfig"; path = "Target Support Files/Pods-MawiTestJob/Pods-MawiTestJob.release.xcconfig"; sourceTree = "<group>"; };
+		8A901FA43F7F71C4CDE482B6 /* Pods-MawiTestJob.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MawiTestJob.debug.xcconfig"; path = "Target Support Files/Pods-MawiTestJob/Pods-MawiTestJob.debug.xcconfig"; sourceTree = "<group>"; };
 		C4F92E1B24389C4300657F5E /* AppDependencyContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDependencyContainer.swift; sourceTree = "<group>"; };
 		C4F92E1D24389C6C00657F5E /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		C4F92E222438A21F00657F5E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +63,7 @@
 		C4FE93FF2438979400F167B9 /* MawiTestJobTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MawiTestJobTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FE94032438979400F167B9 /* MawiTestJobTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MawiTestJobTests.swift; sourceTree = "<group>"; };
 		C4FE94052438979400F167B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE37D10B7577F3DA23B84115 /* Pods_MawiTestJob.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MawiTestJob.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9205561274CBE99A417B0769 /* Pods_MawiTestJob.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +79,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCED31D34718E92D7A6620E6 /* Pods_MawiTestJobTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		313BEADA2E7C9E04686889D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FE37D10B7577F3DA23B84115 /* Pods_MawiTestJob.framework */,
+				51D94B8988AF13BDAAA7B0CD /* Pods_MawiTestJobTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA7AF3C20550DBD11FCB4B01 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8A901FA43F7F71C4CDE482B6 /* Pods-MawiTestJob.debug.xcconfig */,
+				744722A78EEA096D5B767608 /* Pods-MawiTestJob.release.xcconfig */,
+				1CB26265C2ADC37D5FA06721 /* Pods-MawiTestJobTests.debug.xcconfig */,
+				432B289AF63AA452E6073F98 /* Pods-MawiTestJobTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		C4F92E1624389B7300657F5E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +185,8 @@
 				C4FE93EB2438978E00F167B9 /* MawiTestJob */,
 				C4FE94022438979400F167B9 /* MawiTestJobTests */,
 				C4FE93EA2438978E00F167B9 /* Products */,
+				AA7AF3C20550DBD11FCB4B01 /* Pods */,
+				313BEADA2E7C9E04686889D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,9 +229,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4FE94082438979500F167B9 /* Build configuration list for PBXNativeTarget "MawiTestJob" */;
 			buildPhases = (
+				0E81BF30A17761129329BD98 /* [CP] Check Pods Manifest.lock */,
 				C4FE93E52438978E00F167B9 /* Sources */,
 				C4FE93E62438978E00F167B9 /* Frameworks */,
 				C4FE93E72438978E00F167B9 /* Resources */,
+				2CFDDC2C20A9EE3152AD7E4D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -214,9 +248,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C4FE940B2438979500F167B9 /* Build configuration list for PBXNativeTarget "MawiTestJobTests" */;
 			buildPhases = (
+				09FCEA481048CFC075CB0BC6 /* [CP] Check Pods Manifest.lock */,
 				C4FE93FB2438979400F167B9 /* Sources */,
 				C4FE93FC2438979400F167B9 /* Frameworks */,
 				C4FE93FD2438979400F167B9 /* Resources */,
+				895732C9E2BE908F9E3A7031 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -284,6 +320,87 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09FCEA481048CFC075CB0BC6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MawiTestJobTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E81BF30A17761129329BD98 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MawiTestJob-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2CFDDC2C20A9EE3152AD7E4D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MawiTestJob/Pods-MawiTestJob-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MawiTestJob/Pods-MawiTestJob-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MawiTestJob/Pods-MawiTestJob-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		895732C9E2BE908F9E3A7031 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MawiTestJobTests/Pods-MawiTestJobTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MawiTestJobTests/Pods-MawiTestJobTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MawiTestJobTests/Pods-MawiTestJobTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C4FE93E52438978E00F167B9 /* Sources */ = {
@@ -452,6 +569,7 @@
 		};
 		C4FE94092438979500F167B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A901FA43F7F71C4CDE482B6 /* Pods-MawiTestJob.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -471,6 +589,7 @@
 		};
 		C4FE940A2438979500F167B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 744722A78EEA096D5B767608 /* Pods-MawiTestJob.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -490,8 +609,8 @@
 		};
 		C4FE940C2438979500F167B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CB26265C2ADC37D5FA06721 /* Pods-MawiTestJobTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PM46468DE;
@@ -512,8 +631,8 @@
 		};
 		C4FE940D2438979500F167B9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 432B289AF63AA452E6073F98 /* Pods-MawiTestJobTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PM46468DE;
