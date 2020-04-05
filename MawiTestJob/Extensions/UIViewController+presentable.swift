@@ -8,6 +8,6 @@
 
 import UIKit
 
-extension UIViewController: Presentable {
-    func toPresentable() -> UIViewController { self }
+extension UIViewController: UIViewControllerGettable {
+    func getUIViewController() -> UIViewController { self }
 }

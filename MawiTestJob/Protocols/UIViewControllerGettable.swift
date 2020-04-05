@@ -8,6 +8,6 @@
 
 import UIKit
 
-protocol Presentable {
-    func toPresentable() -> UIViewController
+protocol UIViewControllerGettable {
+    func getUIViewController() -> UIViewController
 }

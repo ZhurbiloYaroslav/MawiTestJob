@@ -9,33 +9,47 @@
 import UIKit
 import RxSwift
 
-// MARK: - Interface
 typealias MeasurementListVCFactory = (_ viewModel: MeasurementListViewControllerType.ViewModelType) -> MeasurementListViewControllerType
 
-protocol MeasurementListCoordinatorDependenciesType  {
-    var measurementListViewControllerFactory: MeasurementListVCFactory { get }
-}
-
-// MARK: - Implementation
-struct MeasurementListCoordinatorDependencies: MeasurementListCoordinatorDependenciesType {
+struct MeasurementListCoordinatorDependencies {
     var measurementListViewControllerFactory: MeasurementListVCFactory
 }
 
-class MeasurementListCoordinator: BaseCoordinator, Presentable {
-    private let dependencies: MeasurementListCoordinatorDependenciesType
+class MeasurementListCoordinator: BaseCoordinator {
+    private let disposeBag = DisposeBag()
+    private let dependencies: MeasurementListCoordinatorDependencies
     private let measurementListViewModel: MeasurementListViewControllerType.ViewModelType
     
-    init(measurementListViewModel: MeasurementListViewControllerType.ViewModelType, dependencies: () -> MeasurementListCoordinatorDependenciesType) {
-        self.measurementListViewModel = measurementListViewModel
+    init(measurementListViewModel: MeasurementListViewControllerType.ViewModelType, dependencies: () -> MeasurementListCoordinatorDependencies) {
         self.dependencies = dependencies()
+        self.measurementListViewModel = measurementListViewModel
+        super.init()
+        configureNavigation()
+    }
+    
+    private func configureNavigation() {
+        measurementListViewModel.output
+            .navigateToStartNewMeasurement
+            .subscribe(onNext: { [weak self] timePeriod in
+                self?.navigateToAddNewMeasurementScreen()
+            }).disposed(by: disposeBag)
     }
     
     override func start() {
-        // Intentionally left blank
+        navigationController.addChild(viewController: {
+            dependencies
+                .measurementListViewControllerFactory(measurementListViewModel)
+                .getUIViewController()
+        })
     }
-    
-    func toPresentable() -> UIViewController {
-        dependencies.measurementListViewControllerFactory(measurementListViewModel)
-            .toPresentable()
+}
+
+extension MeasurementListCoordinator {
+    private func navigateToAddNewMeasurementScreen() {
+        // Implementation for testing purposes
+        // TODO: Implement it with coordinator
+        navigationController.present(viewController: {
+            MeasurementNewViewController()
+        }, animated: true, completion: nil)
     }
 }

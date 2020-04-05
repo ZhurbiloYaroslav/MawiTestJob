@@ -18,7 +18,7 @@ class RootDIContainer {
             container.register(RootCoordinator.self) { resolver -> RootCoordinator in
                 let viewModel = resolver.resolve(RootViewModelType.self)!
                 return RootCoordinator(rootViewModel: viewModel, dependencies: {
-                    resolver.resolve(RootCoordinatorDependenciesType.self)!
+                    resolver.resolve(RootCoordinatorDependencies.self)!
                 })
             }
             container.register(RootViewModelType.self) { resolver -> RootViewModelType in
@@ -27,7 +27,7 @@ class RootDIContainer {
             container.register(RootViewControllerType.self) { resolver -> RootViewControllerType in
                 RootViewController()
             }
-            container.register(RootCoordinatorDependenciesType.self) { resolver -> RootCoordinatorDependenciesType in
+            container.register(RootCoordinatorDependencies.self) { resolver -> RootCoordinatorDependencies in
                 return RootCoordinatorDependencies(windowFactory: { window },
                                                    rootViewControllerFactory: resolver.resolve(RootViewControllerFactory.self)!,
                                                    measurementListCoordinatorFactory: resolver.resolve(MeasurementListCoordinatorFactory.self)!)
@@ -41,7 +41,8 @@ class RootDIContainer {
             }
             container.register(MeasurementListCoordinatorFactory.self) { _ in
                 return {
-                    MeasurementListContainer(parentContainer: container).makeMeasurementListCoordinator()
+                    MeasurementListContainer(parentContainer: container)
+                        .makeMeasurementListCoordinator()
                 }
             }
         }

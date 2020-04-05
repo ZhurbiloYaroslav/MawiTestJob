@@ -17,7 +17,7 @@ class MeasurementListContainer {
             container.register(MeasurementListCoordinator.self) { resolver in
                 let viewModel = resolver.resolve(MeasurementListViewModelType.self)!
                 return MeasurementListCoordinator(measurementListViewModel: viewModel, dependencies: {
-                    resolver.resolve(MeasurementListCoordinatorDependenciesType.self, argument: viewModel)!
+                    resolver.resolve(MeasurementListCoordinatorDependencies.self, argument: viewModel)!
                 })
             }
             container.register(MeasurementListViewModelType.self) { resolver -> MeasurementListViewModelType in
@@ -26,8 +26,8 @@ class MeasurementListContainer {
             container.register(MeasurementListViewControllerType.self) { resolver -> MeasurementListViewControllerType in
                 MeasurementListViewController()
             }
-            container.register(MeasurementListCoordinatorDependenciesType.self) {
-                (resolver, viewModel: MeasurementListViewControllerType.ViewModelType) -> MeasurementListCoordinatorDependenciesType in
+            container.register(MeasurementListCoordinatorDependencies.self) {
+                (resolver, viewModel: MeasurementListViewControllerType.ViewModelType) -> MeasurementListCoordinatorDependencies in
                 let factory = resolver.resolve(MeasurementListVCFactory.self, argument: viewModel)!
                 return MeasurementListCoordinatorDependencies(measurementListViewControllerFactory: factory)
             }

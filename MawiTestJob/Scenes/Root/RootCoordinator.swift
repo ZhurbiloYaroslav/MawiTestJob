@@ -13,14 +13,8 @@ import RxSwift
 typealias RootViewControllerFactory = (RootViewControllerType.ViewModelType) -> RootViewControllerType
 typealias MeasurementListCoordinatorFactory = () -> MeasurementListCoordinator
 
-protocol RootCoordinatorDependenciesType  {
-    var windowFactory: () -> UIWindow { get }
-    var rootViewControllerFactory: RootViewControllerFactory { get }
-    var measurementListCoordinatorFactory: MeasurementListCoordinatorFactory { get }
-}
-
 // MARK: - Implementation
-struct RootCoordinatorDependencies: RootCoordinatorDependenciesType {
+struct RootCoordinatorDependencies {
     let windowFactory: () -> UIWindow
     let rootViewControllerFactory: RootViewControllerFactory
     let measurementListCoordinatorFactory: MeasurementListCoordinatorFactory
@@ -28,11 +22,11 @@ struct RootCoordinatorDependencies: RootCoordinatorDependenciesType {
 
 class RootCoordinator: BaseCoordinator {
     private let disposeBag = DisposeBag()
-    private let dependencies: RootCoordinatorDependenciesType
+    private let dependencies: RootCoordinatorDependencies
     private let rootViewModel: RootViewControllerType.ViewModelType
     private weak var rootViewController: RootViewControllerType?
     
-    init(rootViewModel: RootViewControllerType.ViewModelType, dependencies: () -> RootCoordinatorDependenciesType) {
+    init(rootViewModel: RootViewControllerType.ViewModelType, dependencies: () -> RootCoordinatorDependencies) {
         self.dependencies = dependencies()
         self.rootViewModel = rootViewModel
         super.init()
@@ -55,7 +49,7 @@ class RootCoordinator: BaseCoordinator {
         window.rootViewController = {
             let rootVC = dependencies.rootViewControllerFactory(rootViewModel)
             rootViewController = rootVC
-            return rootVC.toPresentable()
+            return rootVC.getUIViewController()
         }()
         window.makeKeyAndVisible()
     }
@@ -65,8 +59,7 @@ class RootCoordinator: BaseCoordinator {
 extension RootCoordinator {
     private func navigateToMeasurementListScreen() {
         let coordinator = dependencies.measurementListCoordinatorFactory()
-        let viewController = coordinator.toPresentable()
         start(coordinator: coordinator)
-        rootViewController?.update(childVC: viewController)
+        rootViewController?.update(childVC: coordinator.navigationController)
     }
 }

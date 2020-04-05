@@ -13,12 +13,15 @@ class AppDependencyContainer {
     private lazy var appDIContainer: Container = {
         Container { container in
             container.register(RootDIContainer.self) { (resolver, window: UIWindow) -> RootDIContainer in
-                RootDIContainer(parentContainer: container, window: window)
+                RootDIContainer(parentContainer: container,
+                                window: window)
             }
         }
     }()
     
     func makeRootCoordinator(window: UIWindow) -> RootCoordinator {
-        appDIContainer.resolve(RootDIContainer.self, argument: window)!.makeRootCoordinator()
+        appDIContainer
+            .resolve(RootDIContainer.self, argument: window)!
+            .makeRootCoordinator()
     }
 }

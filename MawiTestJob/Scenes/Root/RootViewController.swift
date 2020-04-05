@@ -9,7 +9,7 @@
 import UIKit
 import RxSwift
 
-protocol RootViewControllerType: class, Presentable {
+protocol RootViewControllerType: class, UIViewControllerGettable {
     typealias ViewModelType = RootViewModelType
     func inject(viewModel: ViewModelType)
     func update(childVC: UIViewController)
