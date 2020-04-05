@@ -10,14 +10,9 @@ import Foundation
 import RxSwift
 
 // MARK: - Interface
-protocol MeasurementNewViewModelInputsType {
-    /// Notifies when View did load
-    var viewDidLoad: AnyObserver<Void> { get }
-}
+protocol MeasurementNewViewModelInputsType: BaseViewModelInputs {}
 
-protocol MeasurementNewViewModelOutputsType {
-    /// Variable for testing purposes
-    var bkgColor: Observable<UIColor> { get }
+protocol MeasurementNewViewModelOutputsType: BaseViewModelOutputs {
     /// Variable for testing purposes
     var values: Observable<[MeasurementType]> { get }
 }
@@ -33,20 +28,29 @@ class MeasurementNewViewModel: MeasurementNewViewModelType {
     let output: MeasurementNewViewModelOutputsType
 
     private let disposeBag = DisposeBag()
+    // Inputs
     private let viewDidLoad = PublishSubject<Void>()
-    private let bkgColor = PublishSubject<UIColor>()
+    private let viewWillDeinit = PublishSubject<Void>()
+    // Outputs
     private let listWithValues = PublishSubject<[MeasurementType]>()
+    private let didFinishCoordinator = PublishSubject<Void>()
     
     init() {
-        input = Input(viewDidLoad: viewDidLoad.asObserver())
-        output = Output(bkgColor: bkgColor.asObserver(),
-                        values: listWithValues.asObserver())
+        input = Input(viewDidLoad: viewDidLoad.asObserver(),
+                      viewWillDeinit: viewWillDeinit.asObserver())
+        output = Output(values: listWithValues.asObserver(),
+                        didFinishCoordinator: didFinishCoordinator.asObserver())
         configure()
     }
     
     func configure() {
+        //
         viewDidLoad.subscribe(onNext: { [weak self] in
-            self?.bkgColor.onNext(.blue)
+            
+        }).disposed(by: disposeBag)
+        //
+        viewWillDeinit.subscribe(onNext: { [weak self] in
+            self?.didFinishCoordinator.onNext(())
         }).disposed(by: disposeBag)
     }
 }
@@ -54,9 +58,10 @@ class MeasurementNewViewModel: MeasurementNewViewModelType {
 extension MeasurementNewViewModel {
     struct Input: MeasurementNewViewModelInputsType {
         let viewDidLoad: AnyObserver<Void>
+        let viewWillDeinit: AnyObserver<Void>
     }
     struct Output: MeasurementNewViewModelOutputsType {
-        let bkgColor: Observable<UIColor>
         let values: Observable<[MeasurementType]>
+        let didFinishCoordinator: Observable<Void>
     }
 }

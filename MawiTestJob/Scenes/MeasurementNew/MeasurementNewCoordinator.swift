@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 
 typealias MeasurementNewVCFactory = (_ viewModel: MeasurementNewViewControllerType.ViewModelType) -> MeasurementNewViewControllerType
+typealias MeasurementNewCoordinatorFactory = () -> MeasurementNewCoordinator
 
 struct MeasurementNewCoordinatorDependencies {
     var measurementNewViewControllerFactory: MeasurementNewVCFactory
@@ -28,7 +29,12 @@ class MeasurementNewCoordinator: BaseCoordinator {
     }
     
     private func configureNavigation() {
-        
+        // Write comment here
+        measurementNewViewModel.output
+            .didFinishCoordinator.subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+                self.parentCoordinator?.didFinish(coordinator: self)
+            }).disposed(by: disposeBag)
     }
     
     override func start() {

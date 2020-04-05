@@ -42,7 +42,7 @@ class MeasurementNewContainer {
         }
     }
     
-    public func makeMeasurementListCoordinator() -> MeasurementListCoordinator {
-        container.resolve(MeasurementListCoordinator.self)!
+    public func makeMeasurementNewCoordinator() -> MeasurementNewCoordinator {
+        container.resolve(MeasurementNewCoordinator.self)!
     }
 }

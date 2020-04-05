@@ -12,7 +12,8 @@ import RxSwift
 typealias MeasurementListVCFactory = (_ viewModel: MeasurementListViewControllerType.ViewModelType) -> MeasurementListViewControllerType
 
 struct MeasurementListCoordinatorDependencies {
-    var measurementListViewControllerFactory: MeasurementListVCFactory
+    let measurementListViewControllerFactory: MeasurementListVCFactory
+    let measurementNewCoordinatorFactory: MeasurementNewCoordinatorFactory
 }
 
 class MeasurementListCoordinator: BaseCoordinator {
@@ -28,10 +29,17 @@ class MeasurementListCoordinator: BaseCoordinator {
     }
     
     private func configureNavigation() {
+        // Write comment here
         measurementListViewModel.output
             .navigateToStartNewMeasurement
             .subscribe(onNext: { [weak self] timePeriod in
                 self?.navigateToAddNewMeasurementScreen()
+            }).disposed(by: disposeBag)
+        // Write comment here
+        measurementListViewModel.output
+            .didFinishCoordinator.subscribe(onNext: { [weak self] in
+                guard let self = self else { return }
+                self.parentCoordinator?.didFinish(coordinator: self)
             }).disposed(by: disposeBag)
     }
     
@@ -46,10 +54,8 @@ class MeasurementListCoordinator: BaseCoordinator {
 
 extension MeasurementListCoordinator {
     private func navigateToAddNewMeasurementScreen() {
-        // Implementation for testing purposes
-        // TODO: Implement it with coordinator
-        navigationController.present(viewController: {
-            MeasurementNewViewController()
-        }, animated: true, completion: nil)
+        let coordinator = dependencies.measurementNewCoordinatorFactory()
+        coordinator.navigationController = navigationController
+        start(coordinator: coordinator)
     }
 }

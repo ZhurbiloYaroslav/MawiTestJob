@@ -40,6 +40,10 @@ class MeasurementListViewController: UIViewController {
         viewModel?.input.viewDidLoad.onNext(())
     }
     
+    deinit {
+        viewModel?.input.viewWillDeinit.onNext(())
+    }
+    
     private func configureNavigationBar() {
         navigationItem.rightBarButtonItem = addNewMeasureButton
     }

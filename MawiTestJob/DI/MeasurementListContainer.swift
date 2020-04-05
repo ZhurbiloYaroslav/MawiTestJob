@@ -32,8 +32,10 @@ class MeasurementListContainer {
             }
             container.register(MeasurementListCoordinatorDependencies.self) {
                 (resolver, viewModel: MeasurementListViewControllerType.ViewModelType) -> MeasurementListCoordinatorDependencies in
-                let factory = resolver.resolve(MeasurementListVCFactory.self, argument: viewModel)!
-                return MeasurementListCoordinatorDependencies(measurementListViewControllerFactory: factory)
+                let vcFactory = resolver.resolve(MeasurementListVCFactory.self, argument: viewModel)!
+                let coordinatorFactory = resolver.resolve(MeasurementNewCoordinatorFactory.self)!
+                return MeasurementListCoordinatorDependencies(measurementListViewControllerFactory: vcFactory,
+                                                              measurementNewCoordinatorFactory: coordinatorFactory)
             }
             container.register(MeasurementListVCFactory.self) {
                 (resolver, viewModel: MeasurementListViewControllerType.ViewModelType) -> MeasurementListVCFactory in
@@ -41,6 +43,12 @@ class MeasurementListContainer {
                     let viewController = resolver.resolve(MeasurementListViewControllerType.self)!
                     viewController.inject(viewModel: viewModel)
                     return viewController
+                }
+            }
+            container.register(MeasurementNewCoordinatorFactory.self) { _ in
+                return {
+                    MeasurementNewContainer(parentContainer: container)
+                        .makeMeasurementNewCoordinator()
                 }
             }
         }

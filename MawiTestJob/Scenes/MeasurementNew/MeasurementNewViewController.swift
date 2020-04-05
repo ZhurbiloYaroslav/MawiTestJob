@@ -23,16 +23,16 @@ class MeasurementNewViewController: UIViewController, MeasurementNewViewControll
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .systemPink
         bindViewModel()
         viewModel?.input.viewDidLoad.onNext(())
     }
     
+    deinit {
+        viewModel?.input.viewWillDeinit.onNext(())
+    }
+    
     private func bindViewModel() {
-        viewModel?.output.bkgColor
-            .subscribe(onNext: { [weak self] color in
-                self?.view.backgroundColor = color
-            }).disposed(by: disposeBag)
+        
     }
 }
 
