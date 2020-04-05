@@ -20,9 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func configureRootScreenInWindow() {
-        rootCoordinator = appDependencyContainer.makeRootCoordinator()
-        window = UIWindow(frame: UIScreen.main.bounds)
-        rootCoordinator?.configure(in: window!)
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        self.window = window
+        rootCoordinator = appDependencyContainer.makeRootCoordinator(window: window)
         rootCoordinator?.start()
     }
 }

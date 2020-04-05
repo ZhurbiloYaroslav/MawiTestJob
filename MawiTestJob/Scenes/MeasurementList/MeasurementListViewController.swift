@@ -23,7 +23,7 @@ class MeasurementListViewController: UIViewController, MeasurementListViewContro
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .yellow
+        view.backgroundColor = .gray
         bindViewModel()
         viewModel?.input.viewDidLoad.onNext(())
     }

@@ -43,7 +43,7 @@ class MeasurementListViewModel: MeasurementListViewModelType {
     
     func configure() {
         viewDidLoad.subscribe(onNext: { [weak self] in
-            self?.bkgColor.onNext(.white)
+            self?.bkgColor.onNext(.lightGray)
         }).disposed(by: disposeBag)
     }
 }

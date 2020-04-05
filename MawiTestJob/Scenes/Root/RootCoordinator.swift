@@ -14,21 +14,23 @@ typealias RootViewControllerFactory = (RootViewControllerType.ViewModelType) -> 
 typealias MeasurementListCoordinatorFactory = () -> MeasurementListCoordinator
 
 protocol RootCoordinatorDependenciesType  {
+    var windowFactory: () -> UIWindow { get }
     var rootViewControllerFactory: RootViewControllerFactory { get }
     var measurementListCoordinatorFactory: MeasurementListCoordinatorFactory { get }
 }
 
 // MARK: - Implementation
 struct RootCoordinatorDependencies: RootCoordinatorDependenciesType {
-    var rootViewControllerFactory: RootViewControllerFactory
-    var measurementListCoordinatorFactory: MeasurementListCoordinatorFactory
+    let windowFactory: () -> UIWindow
+    let rootViewControllerFactory: RootViewControllerFactory
+    let measurementListCoordinatorFactory: MeasurementListCoordinatorFactory
 }
 
 class RootCoordinator: BaseCoordinator {
+    private let disposeBag = DisposeBag()
     private let dependencies: RootCoordinatorDependenciesType
     private let rootViewModel: RootViewControllerType.ViewModelType
     private weak var rootViewController: RootViewControllerType?
-    private let disposeBag = DisposeBag()
     
     init(rootViewModel: RootViewControllerType.ViewModelType, dependencies: () -> RootCoordinatorDependenciesType) {
         self.dependencies = dependencies()
@@ -38,7 +40,7 @@ class RootCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        // Intentionally left blank
+        configure(in: dependencies.windowFactory())
     }
     
     private func bindRootViewModel() {
@@ -49,21 +51,22 @@ class RootCoordinator: BaseCoordinator {
             }).disposed(by: disposeBag)
     }
     
-    private func navigateToMeasurementListScreen() {
-        let coordinator = dependencies.measurementListCoordinatorFactory()
-        let viewController = coordinator.toPresentable()
-        coordinator.start(coordinator: self)
-        rootViewController?.update(childVC: viewController)
-    }
-}
-
-extension RootCoordinator: UIWindowConfigurable {
-    func configure(in window: UIWindow) {
+    private func configure(in window: UIWindow) {
         window.rootViewController = {
             let rootVC = dependencies.rootViewControllerFactory(rootViewModel)
             rootViewController = rootVC
             return rootVC.toPresentable()
         }()
         window.makeKeyAndVisible()
+    }
+}
+
+// MARK: - Navigation methods
+extension RootCoordinator {
+    private func navigateToMeasurementListScreen() {
+        let coordinator = dependencies.measurementListCoordinatorFactory()
+        let viewController = coordinator.toPresentable()
+        start(coordinator: coordinator)
+        rootViewController?.update(childVC: viewController)
     }
 }

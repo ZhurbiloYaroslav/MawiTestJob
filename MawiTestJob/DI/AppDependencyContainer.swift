@@ -12,13 +12,13 @@ import Swinject
 class AppDependencyContainer {
     private lazy var appDIContainer: Container = {
         Container { container in
-            container.register(RootDIContainer.self) { resolver -> RootDIContainer in
-                RootDIContainer(parentContainer: container)
+            container.register(RootDIContainer.self) { (resolver, window: UIWindow) -> RootDIContainer in
+                RootDIContainer(parentContainer: container, window: window)
             }
         }
     }()
     
-    func makeRootCoordinator() -> RootCoordinator {
-        appDIContainer.resolve(RootDIContainer.self)!.makeRootCoordinator()
+    func makeRootCoordinator(window: UIWindow) -> RootCoordinator {
+        appDIContainer.resolve(RootDIContainer.self, argument: window)!.makeRootCoordinator()
     }
 }

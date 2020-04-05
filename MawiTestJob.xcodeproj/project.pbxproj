@@ -24,7 +24,6 @@
 		C4F92E412438C98A00657F5E /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E402438C98A00657F5E /* Presentable.swift */; };
 		C4F92E442438C9DA00657F5E /* UIViewController+presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E432438C9DA00657F5E /* UIViewController+presentable.swift */; };
 		C4F92E462438D35400657F5E /* RootDIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E452438D35400657F5E /* RootDIContainer.swift */; };
-		C4F92E482438DE3700657F5E /* UIWindowConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E472438DE3700657F5E /* UIWindowConfigurable.swift */; };
 		C4F92E4A2438EAE400657F5E /* MeasurementListContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E492438EAE400657F5E /* MeasurementListContainer.swift */; };
 		C4FE93ED2438978E00F167B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE93EC2438978E00F167B9 /* AppDelegate.swift */; };
 		C4FE93F62438979400F167B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F52438979400F167B9 /* Assets.xcassets */; };
@@ -65,7 +64,6 @@
 		C4F92E402438C98A00657F5E /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		C4F92E432438C9DA00657F5E /* UIViewController+presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+presentable.swift"; sourceTree = "<group>"; };
 		C4F92E452438D35400657F5E /* RootDIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootDIContainer.swift; sourceTree = "<group>"; };
-		C4F92E472438DE3700657F5E /* UIWindowConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindowConfigurable.swift; sourceTree = "<group>"; };
 		C4F92E492438EAE400657F5E /* MeasurementListContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementListContainer.swift; sourceTree = "<group>"; };
 		C4FE93E92438978E00F167B9 /* MawiTestJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MawiTestJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FE93EC2438978E00F167B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -221,7 +219,6 @@
 			isa = PBXGroup;
 			children = (
 				C4F92E402438C98A00657F5E /* Presentable.swift */,
-				C4F92E472438DE3700657F5E /* UIWindowConfigurable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -465,7 +462,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4F92E482438DE3700657F5E /* UIWindowConfigurable.swift in Sources */,
 				C4F92E352438A34000657F5E /* MeasurementNewViewModel.swift in Sources */,
 				C4F92E412438C98A00657F5E /* Presentable.swift in Sources */,
 				C4F92E332438A33300657F5E /* MeasurementNewViewController.swift in Sources */,

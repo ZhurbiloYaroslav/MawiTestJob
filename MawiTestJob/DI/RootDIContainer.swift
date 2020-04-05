@@ -13,7 +13,7 @@ import RxSwift
 class RootDIContainer {
     private let container: Container
     
-    init(parentContainer: Container) {
+    init(parentContainer: Container, window: UIWindow) {
         container = Container(parent: parentContainer) { container in
             container.register(RootCoordinator.self) { resolver -> RootCoordinator in
                 let viewModel = resolver.resolve(RootViewModelType.self)!
@@ -28,7 +28,8 @@ class RootDIContainer {
                 RootViewController()
             }
             container.register(RootCoordinatorDependenciesType.self) { resolver -> RootCoordinatorDependenciesType in
-                return RootCoordinatorDependencies(rootViewControllerFactory: resolver.resolve(RootViewControllerFactory.self)!,
+                return RootCoordinatorDependencies(windowFactory: { window },
+                                                   rootViewControllerFactory: resolver.resolve(RootViewControllerFactory.self)!,
                                                    measurementListCoordinatorFactory: resolver.resolve(MeasurementListCoordinatorFactory.self)!)
             }
             container.register(RootViewControllerFactory.self) { resolver -> RootViewControllerFactory in
