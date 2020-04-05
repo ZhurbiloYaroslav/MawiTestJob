@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol MeasurementModelling {
+protocol MeasurementType {
     var id: String { get }
     var date: Date { get }
     var value: Int { get }
 }
 
-struct Measurement: MeasurementModelling {
+struct Measurement: MeasurementType {
     let id: String
     let date: Date
     let value: Int

@@ -20,7 +20,7 @@ protocol Coordinator: AnyObject {
 
 class BaseCoordinator: Coordinator {
     
-    var navigationController = UINavigationController()
+    var navigationController: UINavigationController = BaseNavigationController()
     var childCoordinators = [Coordinator]()
     var parentCoordinator: Coordinator?
     

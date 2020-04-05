@@ -24,7 +24,7 @@ class MeasurementListContainer {
                 MeasurementListViewModel()
             }
             container.register(MeasurementListViewControllerType.self) { resolver -> MeasurementListViewControllerType in
-                MeasurementListViewController()
+                R.storyboard.measurementList.measurementListViewController()!
             }
             container.register(MeasurementListCoordinatorDependencies.self) {
                 (resolver, viewModel: MeasurementListViewControllerType.ViewModelType) -> MeasurementListCoordinatorDependencies in

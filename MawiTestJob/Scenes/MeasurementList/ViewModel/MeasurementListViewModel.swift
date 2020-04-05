@@ -19,10 +19,8 @@ protocol MeasurementListViewModelInputsType {
 
 protocol MeasurementListViewModelOutputsType {
     /// Variable for testing purposes
-    var bkgColor: Observable<UIColor> { get }
-    /// Variable for testing purposes
-    var values: Observable<[MeasurementModelling]> { get }
-    ///
+    var sections: Observable<[MeasurementListSection]> { get }
+    /// Notifies coordinator when we need navigate to 'Start new measurement screen'
     var navigateToStartNewMeasurement: Observable<MeasurementTime> { get }
 }
 
@@ -41,22 +39,21 @@ class MeasurementListViewModel: MeasurementListViewModelType {
     private let viewDidLoad = PublishSubject<Void>()
     private let didPressAddNewMeasurement = PublishSubject<MeasurementTime>()
     // Outputs
-    private let bkgColor = PublishSubject<UIColor>()
-    private let listWithValues = PublishSubject<[MeasurementModelling]>()
+    private let sections = PublishSubject<[MeasurementListSection]>()
     private let navigateToStartNewMeasurement = PublishSubject<MeasurementTime>()
     
     init() {
         input = Input(viewDidLoad: viewDidLoad.asObserver(),
                       didPressAddNewMeasurement: didPressAddNewMeasurement.asObserver())
-        output = Output(bkgColor: bkgColor.asObserver(),
-                        values: listWithValues.asObserver(),
+        output = Output(sections: sections.asObserver(),
                         navigateToStartNewMeasurement: navigateToStartNewMeasurement.asObserver())
         configure()
     }
     
     func configure() {
         viewDidLoad.subscribe(onNext: { [weak self] in
-            self?.bkgColor.onNext(.white)
+            let some = [MeasurementListSection(id: .measurement(MeasurementDisplayModel()))]
+            self?.sections.onNext(some)
         }).disposed(by: disposeBag)
         didPressAddNewMeasurement.subscribe(onNext: { [weak self] timePeriod in
             self?.navigateToStartNewMeasurement.onNext(timePeriod)
@@ -71,8 +68,7 @@ extension MeasurementListViewModel {
         let didPressAddNewMeasurement: AnyObserver<MeasurementTime>
     }
     struct Output: MeasurementListViewModelOutputsType {
-        let bkgColor: Observable<UIColor>
-        let values: Observable<[MeasurementModelling]>
+        let sections: Observable<[MeasurementListSection]>
         var navigateToStartNewMeasurement: Observable<MeasurementTime>
     }
 }

@@ -19,7 +19,7 @@ protocol MeasurementNewViewModelOutputsType {
     /// Variable for testing purposes
     var bkgColor: Observable<UIColor> { get }
     /// Variable for testing purposes
-    var values: Observable<[MeasurementModelling]> { get }
+    var values: Observable<[MeasurementType]> { get }
 }
 
 protocol MeasurementNewViewModelType {
@@ -35,7 +35,7 @@ class MeasurementNewViewModel: MeasurementNewViewModelType {
     private let disposeBag = DisposeBag()
     private let viewDidLoad = PublishSubject<Void>()
     private let bkgColor = PublishSubject<UIColor>()
-    private let listWithValues = PublishSubject<[MeasurementModelling]>()
+    private let listWithValues = PublishSubject<[MeasurementType]>()
     
     init() {
         input = Input(viewDidLoad: viewDidLoad.asObserver())
@@ -57,6 +57,6 @@ extension MeasurementNewViewModel {
     }
     struct Output: MeasurementNewViewModelOutputsType {
         let bkgColor: Observable<UIColor>
-        let values: Observable<[MeasurementModelling]>
+        let values: Observable<[MeasurementType]>
     }
 }
