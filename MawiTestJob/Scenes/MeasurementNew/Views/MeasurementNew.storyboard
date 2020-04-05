@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,11 +12,26 @@
             <objects>
                 <viewController storyboardIdentifier="MeasurementNewViewController" id="c0S-tM-3xb" customClass="MeasurementNewViewController" customModule="MawiTestJob" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6G7-8o-pyR">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hvo-K5-OmV">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hvo-K5-OmV" firstAttribute="top" secondItem="ICx-BN-VP9" secondAttribute="top" id="Vje-DK-FUW"/>
+                            <constraint firstItem="hvo-K5-OmV" firstAttribute="leading" secondItem="ICx-BN-VP9" secondAttribute="leading" id="bXe-tR-pVT"/>
+                            <constraint firstItem="ICx-BN-VP9" firstAttribute="bottom" secondItem="hvo-K5-OmV" secondAttribute="bottom" id="f8u-iT-lyl"/>
+                            <constraint firstItem="ICx-BN-VP9" firstAttribute="trailing" secondItem="hvo-K5-OmV" secondAttribute="trailing" id="wuF-3L-lPa"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ICx-BN-VP9"/>
                     </view>
+                    <connections>
+                        <outlet property="chartViewContainer" destination="hvo-K5-OmV" id="QDx-ig-KNP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIp-cI-QJW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
