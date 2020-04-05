@@ -52,6 +52,7 @@
 		C4F92E882439F38D00657F5E /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4F92E842439F1EA00657F5E /* Roboto-Bold.ttf */; };
 		C4F92E8A2439F40300657F5E /* UIView+setBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E892439F40300657F5E /* UIView+setBorder.swift */; };
 		C4F92E8C2439FD1D00657F5E /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E8B2439FD1D00657F5E /* BaseNavigationController.swift */; };
+		C4F92E8E243A114A00657F5E /* MeasurementListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E8D243A114A00657F5E /* MeasurementListDataSource.swift */; };
 		C4FE93ED2438978E00F167B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE93EC2438978E00F167B9 /* AppDelegate.swift */; };
 		C4FE93F62438979400F167B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F52438979400F167B9 /* Assets.xcassets */; };
 		C4FE93F92438979400F167B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F72438979400F167B9 /* LaunchScreen.storyboard */; };
@@ -119,6 +120,7 @@
 		C4F92E842439F1EA00657F5E /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
 		C4F92E892439F40300657F5E /* UIView+setBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+setBorder.swift"; sourceTree = "<group>"; };
 		C4F92E8B2439FD1D00657F5E /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		C4F92E8D243A114A00657F5E /* MeasurementListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementListDataSource.swift; sourceTree = "<group>"; };
 		C4FE93E92438978E00F167B9 /* MawiTestJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MawiTestJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FE93EC2438978E00F167B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4FE93F52438979400F167B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 			children = (
 				C4F92E5E2439E8C900657F5E /* MeasurementDisplayModel.swift */,
 				C4F92E632439EE6600657F5E /* MeasurementListSection.swift */,
+				C4F92E8D243A114A00657F5E /* MeasurementListDataSource.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -672,6 +675,7 @@
 				C4F92E462438D35400657F5E /* RootDIContainer.swift in Sources */,
 				C4F92E712439F0E800657F5E /* LoadingCell.swift in Sources */,
 				C4F92E502439CFCE00657F5E /* MeasurementTime.swift in Sources */,
+				C4F92E8E243A114A00657F5E /* MeasurementListDataSource.swift in Sources */,
 				C4F92E7B2439F18700657F5E /* Visibility.swift in Sources */,
 				C4F92E1C24389C4300657F5E /* AppDependencyContainer.swift in Sources */,
 				C4F92E7F2439F1C900657F5E /* UIFont+defaultFont.swift in Sources */,

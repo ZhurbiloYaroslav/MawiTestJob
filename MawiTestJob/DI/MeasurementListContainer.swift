@@ -21,7 +21,11 @@ class MeasurementListContainer {
                 })
             }
             container.register(MeasurementListViewModelType.self) { resolver -> MeasurementListViewModelType in
-                MeasurementListViewModel()
+                let dataSource = resolver.resolve(MeasurementListDataSourceType.self)!
+                return MeasurementListViewModel(dataSource: dataSource)
+            }
+            container.register(MeasurementListDataSourceType.self) { resolver -> MeasurementListDataSourceType in
+                MeasurementListDataSource()
             }
             container.register(MeasurementListViewControllerType.self) { resolver -> MeasurementListViewControllerType in
                 R.storyboard.measurementList.measurementListViewController()!

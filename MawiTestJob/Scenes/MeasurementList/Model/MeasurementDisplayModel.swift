@@ -15,12 +15,12 @@ protocol MeasurementDisplayModelType {
 }
 
 struct MeasurementDisplayModel: MeasurementDisplayModelType {
-    var measurementId: NSAttributedString {
-        "ID works!".styled(with: Self.idStyle)
-    }
+    var measurementId: NSAttributedString
+    var measurementDataTime: NSAttributedString
     
-    var measurementDataTime: NSAttributedString {
-        "DateTime works!".styled(with: Self.dateTimeStyle)
+    init(model: MeasurementType) {
+        self.measurementId = model.id.styled(with: Self.idStyle)
+        self.measurementDataTime = model.date.description.styled(with: Self.dateTimeStyle)
     }
 }
 
