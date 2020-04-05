@@ -10,7 +10,6 @@ target 'MawiTestJob' do
   pod 'RxSwift', '5.1.1'
   pod 'RxCocoa', '5.1.1'
   pod 'Realm', '4.4.0'
-  pod 'RxRealm', '2.0.0'
   pod 'Charts', '3.4.0'
   pod 'Swinject', '2.7.1'
   pod 'R.swift', '5.1.0'

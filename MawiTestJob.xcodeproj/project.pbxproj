@@ -236,11 +236,9 @@
 			isa = PBXGroup;
 			children = (
 				C4F92E2C2438A2D600657F5E /* MeasurementListCoordinator.swift */,
-				C4F92E552439E5C900657F5E /* ViewModel */,
-				C4F92E542439E5BF00657F5E /* View */,
+				C4F92E2E2438A30100657F5E /* MeasurementListViewModel.swift */,
+				C4F92E542439E5BF00657F5E /* Views */,
 				C4F92E572439E62600657F5E /* Model */,
-				C4F92E562439E61300657F5E /* Subviews */,
-				C4F92E532439E59500657F5E /* SectionControllers */,
 			);
 			path = MeasurementList;
 			sourceTree = "<group>";
@@ -249,9 +247,8 @@
 			isa = PBXGroup;
 			children = (
 				C4F92E302438A31F00657F5E /* MeasurementNewCoordinator.swift */,
-				C4F92E322438A33300657F5E /* MeasurementNewViewController.swift */,
 				C4F92E342438A34000657F5E /* MeasurementNewViewModel.swift */,
-				C4F92E4D2439CDF900657F5E /* MeasurementNew.storyboard */,
+				C4F92E91243A40D800657F5E /* Views */,
 			);
 			path = MeasurementNew;
 			sourceTree = "<group>";
@@ -303,40 +300,24 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C4F92E532439E59500657F5E /* SectionControllers */ = {
-			isa = PBXGroup;
-			children = (
-				C4F92E5C2439E69800657F5E /* MeasurementListItemSectionController.swift */,
-				C4F92E6A2439F06E00657F5E /* PlaceholderSectionController.swift */,
-				C4F92E6C2439F0A700657F5E /* LoadingSectionController.swift */,
-			);
-			path = SectionControllers;
-			sourceTree = "<group>";
-		};
-		C4F92E542439E5BF00657F5E /* View */ = {
+		C4F92E542439E5BF00657F5E /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				C4F92E2A2438A2BF00657F5E /* MeasurementListViewController.swift */,
 				C4F92E4B2439CDB500657F5E /* MeasurementList.storyboard */,
+				C4F92E562439E61300657F5E /* MeasurementListItemCell */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		C4F92E552439E5C900657F5E /* ViewModel */ = {
+		C4F92E562439E61300657F5E /* MeasurementListItemCell */ = {
 			isa = PBXGroup;
 			children = (
-				C4F92E2E2438A30100657F5E /* MeasurementListViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		C4F92E562439E61300657F5E /* Subviews */ = {
-			isa = PBXGroup;
-			children = (
+				C4F92E5C2439E69800657F5E /* MeasurementListItemSectionController.swift */,
 				C4F92E582439E67400657F5E /* MeasurementListItemCell.swift */,
 				C4F92E592439E67400657F5E /* MeasurementListItemCell.xib */,
 			);
-			path = Subviews;
+			path = MeasurementListItemCell;
 			sourceTree = "<group>";
 		};
 		C4F92E572439E62600657F5E /* Model */ = {
@@ -370,6 +351,7 @@
 		C4F92E6E2439F0C500657F5E /* LoadingCell */ = {
 			isa = PBXGroup;
 			children = (
+				C4F92E6C2439F0A700657F5E /* LoadingSectionController.swift */,
 				C4F92E6F2439F0E800657F5E /* LoadingCell.swift */,
 				C4F92E702439F0E800657F5E /* LoadingCell.xib */,
 			);
@@ -379,6 +361,7 @@
 		C4F92E732439F10C00657F5E /* PlaceholderCell */ = {
 			isa = PBXGroup;
 			children = (
+				C4F92E6A2439F06E00657F5E /* PlaceholderSectionController.swift */,
 				C4F92E742439F12900657F5E /* PlaceholderCell.swift */,
 				C4F92E752439F12900657F5E /* PlaceholderCell.xib */,
 				C4F92E782439F16000657F5E /* PlaceholderViewModel.swift */,
@@ -396,6 +379,23 @@
 				C4F92E842439F1EA00657F5E /* Roboto-Bold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		C4F92E91243A40D800657F5E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C4F92E322438A33300657F5E /* MeasurementNewViewController.swift */,
+				C4F92E4D2439CDF900657F5E /* MeasurementNew.storyboard */,
+				C4F92E92243A40F400657F5E /* ChartView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C4F92E92243A40F400657F5E /* ChartView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChartView;
 			sourceTree = "<group>";
 		};
 		C4FE93E02438978E00F167B9 = {
