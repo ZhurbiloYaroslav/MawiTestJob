@@ -9,17 +9,18 @@
 import Foundation
 import BonMot
 
-protocol MeasurementDisplayModelType {
+protocol MeasurementDisplayModelType: IDContainable {
     var measurementId: NSAttributedString { get }
     var measurementDataTime: NSAttributedString { get }
 }
 
 struct MeasurementDisplayModel: MeasurementDisplayModelType {
-    var measurementId: NSAttributedString
+    var id: String
+    var measurementId: NSAttributedString { return id.styled(with: Self.idStyle) }
     var measurementDataTime: NSAttributedString
     
-    init(model: MeasurementType) {
-        self.measurementId = model.id.styled(with: Self.idStyle)
+    init(model: MeasurementDataSetType) {
+        self.id = model.id
         self.measurementDataTime = model.date.description.styled(with: Self.dateTimeStyle)
     }
 }

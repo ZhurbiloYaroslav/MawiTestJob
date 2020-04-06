@@ -1,5 +1,5 @@
 //
-//  Measurement.swift
+//  MeasurementDataSet.swift
 //  MawiTestJob
 //
 //  Created by Yaroslav Zhurbilo on 04.04.20.
@@ -8,14 +8,14 @@
 
 import Foundation
 
-protocol MeasurementType {
+protocol MeasurementDataSetType {
     var id: String { get }
     var date: Date { get }
-    var value: Int { get }
+    var data: [MeasurementPointType] { get }
 }
 
-struct Measurement: MeasurementType {
+struct MeasurementDataSet: MeasurementDataSetType {
     let id: String
     let date: Date
-    let value: Int
+    let data: [MeasurementPointType]
 }

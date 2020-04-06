@@ -7,30 +7,30 @@
 //
 
 import IGListKit
+import RxSwift
 
-protocol MeasurementListDataSourceType: NSObject, ListAdapterDataSource {}
+protocol MeasurementListDataSourceDelegate: class {
+    func reloadData()
+    func didSelectCell(measurement: IDContainable)
+}
+protocol MeasurementListDataSourceType: NSObject, ListAdapterDataSource {
+    func attach(delegate: MeasurementListDataSourceDelegate)
+    func getMeasurementWith(id: IDContainable) -> Observable<MeasurementDataSet>
+}
 
-class MeasurementListDataSource: NSObject, MeasurementListDataSourceType {
+class MeasurementListDataSource: NSObject {
     
+    private weak var delegate: MeasurementListDataSourceDelegate?
     private var sections: [ListDiffable] = []
     
     override init() {
         self.sections = [
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "1", date: Date(), value: 145)))),
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "2", date: Date(), value: 145)))),
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "3", date: Date(), value: 145)))),
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "4", date: Date(), value: 145)))),
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "5", date: Date(), value: 145)))),
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "6", date: Date(), value: 145)))),
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "7", date: Date(), value: 145)))),
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "8", date: Date(), value: 145)))),
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "9", date: Date(), value: 145)))),
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "10", date: Date(), value: 145)))),
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "11", date: Date(), value: 145)))),
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "12", date: Date(), value: 145)))),
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "13", date: Date(), value: 145)))),
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "14", date: Date(), value: 145)))),
-            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: Measurement(id: "15", date: Date(), value: 145))))
+            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: MeasurementDataSet(id: "1", date: Date(), data: [MeasurementPoint(value: 5)])))),
+            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: MeasurementDataSet(id: "2", date: Date(), data: [MeasurementPoint(value: 5)])))),
+            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: MeasurementDataSet(id: "3", date: Date(), data: [MeasurementPoint(value: 5)])))),
+            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: MeasurementDataSet(id: "4", date: Date(), data: [MeasurementPoint(value: 5)])))),
+            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: MeasurementDataSet(id: "5", date: Date(), data: [MeasurementPoint(value: 5)])))),
+            MeasurementListSection(id: .measurement(MeasurementDisplayModel(model: MeasurementDataSet(id: "6", date: Date(), data: [MeasurementPoint(value: 5)])))),
         ]
     }
     
@@ -48,13 +48,13 @@ class MeasurementListDataSource: NSObject, MeasurementListDataSourceType {
             case .empty:
                 let viewModel = PlaceholderCellEmptyViewModel(buttonModel:
                     PlaceholderCellEmptyButtonModel(buttonAction: { [weak self] in
-                        
+                    self?.delegate?.reloadData()
                 }))
                 return PlaceholderSectionController(height: collectionViewHeight,
                                                     viewModel: viewModel)
             case .error(let image, let title, let message):
                 let buttonModel = PlaceholderCellEmptyButtonModel(buttonAction: { [weak self] in
-                    //self?.output?.reloadData()
+                    self?.delegate?.reloadData()
                 })
                 let viewModel = PlaceholderCellErrorViewModel(image: image,
                                                               title: title,
@@ -66,8 +66,13 @@ class MeasurementListDataSource: NSObject, MeasurementListDataSourceType {
                 return LoadingSectionController(height: collectionViewHeight)
                 
             case .measurement(let measurement):
-                return MeasurementListItemSectionController(measurement: measurement,
-                                                             edges: .init(top: 5, left: 0, bottom: 0, right: 0))
+                let selectionAction: MeasurementListItemSectionController.SelectionAction = { [weak self] measurement in
+                    self?.delegate?.didSelectCell(measurement: measurement)
+                }
+                let sectionController = MeasurementListItemSectionController(measurement: measurement,
+                                                                             edges: .init(top: 5, left: 0, bottom: 0, right: 0),
+                                                                             selectionAction: selectionAction)
+                return sectionController
             }
         }
         return ListSectionController()
@@ -75,5 +80,25 @@ class MeasurementListDataSource: NSObject, MeasurementListDataSourceType {
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
         return nil
+    }
+}
+
+extension MeasurementListDataSource: MeasurementListDataSourceType {
+    func attach(delegate: MeasurementListDataSourceDelegate) {
+        self.delegate = delegate
+    }
+    
+    func getMeasurementWith(id: IDContainable) -> Observable<MeasurementDataSet> {
+        // Mocked data for testing
+        return Observable.create { observer in
+            let values: [MeasurementPoint] = [
+                MeasurementPoint(value: 5),
+                MeasurementPoint(value: 15),
+                MeasurementPoint(value: -5),
+                MeasurementPoint(value: -15),
+            ]
+            observer.onNext(MeasurementDataSet(id: "1", date: Date(), data: values))
+            return Disposables.create()
+        }
     }
 }

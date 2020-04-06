@@ -10,11 +10,13 @@ import UIKit
 import IGListKit
 
 final class MeasurementListItemSectionController: ListSectionController {
-    
+    typealias SelectionAction = (_ measurement: MeasurementDisplayModelType) -> Void
     private let measurement: MeasurementDisplayModelType
+    private let selectionAction: SelectionAction?
     
-    init(measurement: MeasurementDisplayModelType, edges: UIEdgeInsets) {
+    init(measurement: MeasurementDisplayModelType, edges: UIEdgeInsets, selectionAction: @escaping SelectionAction) {
         self.measurement = measurement
+        self.selectionAction = selectionAction
         super.init()
         inset = edges
     }
@@ -44,5 +46,9 @@ final class MeasurementListItemSectionController: ListSectionController {
             else { fatalError() }
         cell.configure(with: measurement)
         return cell
+    }
+    
+    override func didSelectItem(at index: Int) {
+        selectionAction?(measurement)
     }
 }

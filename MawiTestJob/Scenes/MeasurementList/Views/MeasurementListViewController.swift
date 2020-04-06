@@ -24,7 +24,7 @@ class MeasurementListViewController: UIViewController {
     /// MARK: - UI outlets and variables
     @IBOutlet private weak var collectionView: UICollectionView!
     private lazy var addNewMeasureButton: UIBarButtonItem = {
-        UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
+        UIBarButtonItem(title: "Start new measurement", style: .plain, target: nil, action: nil)
     }()
     private lazy var adapter: ListAdapter = {
         ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 3)
@@ -51,6 +51,7 @@ class MeasurementListViewController: UIViewController {
     private func configureAdapter() {
         adapter.collectionView = collectionView
         adapter.dataSource = viewModel?.dataSource
+        viewModel?.dataSource.attach(delegate: self)
     }
     
     private func bindViewModel() {
@@ -74,5 +75,15 @@ class MeasurementListViewController: UIViewController {
 extension MeasurementListViewController: MeasurementListViewControllerType {
     func inject(viewModel: ViewModelType) {
         self.viewModel = viewModel
+    }
+}
+
+extension MeasurementListViewController: MeasurementListDataSourceDelegate {
+    func reloadData() {
+        
+    }
+    
+    func didSelectCell(measurement: IDContainable) {
+        viewModel?.input.didSelectMeasurement.onNext(measurement)
     }
 }

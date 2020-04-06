@@ -14,7 +14,7 @@ protocol MeasurementNewViewModelInputsType: BaseViewModelInputs {}
 
 protocol MeasurementNewViewModelOutputsType: BaseViewModelOutputs {
     /// Variable for testing purposes
-    var values: Observable<[MeasurementType]> { get }
+    var values: Observable<[MeasurementDataSetType]> { get }
     var embedChartView: Observable<Void> { get }
 }
 
@@ -33,7 +33,7 @@ class MeasurementNewViewModel: MeasurementNewViewModelType {
     private let viewDidLoad = PublishSubject<Void>()
     private let viewWillDeinit = PublishSubject<Void>()
     // Outputs
-    private let listWithValues = PublishSubject<[MeasurementType]>()
+    private let listWithValues = PublishSubject<[MeasurementDataSetType]>()
     private let didFinishCoordinator = PublishSubject<Void>()
     private let embedChartView = PublishSubject<Void>()
     
@@ -64,7 +64,7 @@ extension MeasurementNewViewModel {
         let viewWillDeinit: AnyObserver<Void>
     }
     struct Output: MeasurementNewViewModelOutputsType {
-        let values: Observable<[MeasurementType]>
+        let values: Observable<[MeasurementDataSetType]>
         let didFinishCoordinator: Observable<Void>
         let embedChartView: Observable<Void>
     }

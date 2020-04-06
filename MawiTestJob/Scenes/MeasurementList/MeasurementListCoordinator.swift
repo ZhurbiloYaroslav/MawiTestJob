@@ -33,7 +33,13 @@ class MeasurementListCoordinator: BaseCoordinator {
         measurementListViewModel.output
             .navigateToStartNewMeasurement
             .subscribe(onNext: { [weak self] timePeriod in
-                self?.navigateToAddNewMeasurementScreen()
+                self?.navigateToAddNewMeasurementScreen(timePeriod: timePeriod)
+            }).disposed(by: disposeBag)
+        // Write comment here
+        measurementListViewModel.output
+            .navigateToShowMeasurementInfo
+            .subscribe(onNext: { [weak self] measurementDataSet in
+                self?.navigateToShowMeasurementInfoScreen(dataSet: measurementDataSet)
             }).disposed(by: disposeBag)
         // Write comment here
         measurementListViewModel.output
@@ -53,9 +59,13 @@ class MeasurementListCoordinator: BaseCoordinator {
 }
 
 extension MeasurementListCoordinator {
-    private func navigateToAddNewMeasurementScreen() {
+    private func navigateToAddNewMeasurementScreen(timePeriod: MeasurementTime) {
         let coordinator = dependencies.measurementNewCoordinatorFactory()
         coordinator.navigationController = navigationController
         start(coordinator: coordinator)
+    }
+    
+    private func navigateToShowMeasurementInfoScreen(dataSet: MeasurementDataSet) {
+        
     }
 }
