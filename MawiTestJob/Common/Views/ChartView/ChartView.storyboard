@@ -22,7 +22,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charts view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csO-o5-M7E">
                                 <rect key="frame" x="142" y="323" width="91" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -36,13 +36,11 @@
                             <constraint firstItem="LSi-hj-gsR" firstAttribute="top" secondItem="VkY-Bb-H8N" secondAttribute="top" id="vRt-Wt-94N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VkY-Bb-H8N"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="LSi-hj-gsR"/>
-                            </mask>
-                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="lineChartView" destination="LSi-hj-gsR" id="qVa-cp-UiA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5sJ-DD-MVm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

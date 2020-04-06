@@ -22,11 +22,11 @@ class MeasurementListViewController: UIViewController {
     private var viewModel: ViewModelType?
     
     /// MARK: - UI outlets and variables
-    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
     private lazy var addNewMeasureButton: UIBarButtonItem = {
         UIBarButtonItem(barButtonSystemItem: .add, target: nil, action: nil)
     }()
-    lazy var adapter: ListAdapter = {
+    private lazy var adapter: ListAdapter = {
         ListAdapter(updater: ListAdapterUpdater(), viewController: self, workingRangeSize: 3)
     }()
     

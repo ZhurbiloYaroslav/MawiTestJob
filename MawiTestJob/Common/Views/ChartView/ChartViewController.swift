@@ -21,6 +21,8 @@ class ChartViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private var viewModel: ViewModelType?
     
+    @IBOutlet private weak var lineChartView: LineChartView!
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             

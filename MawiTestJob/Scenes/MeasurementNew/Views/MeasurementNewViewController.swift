@@ -21,7 +21,7 @@ class MeasurementNewViewController: UIViewController {
     private let disposeBag = DisposeBag()
     private var viewModel: ViewModelType?
     
-    @IBOutlet weak var chartViewContainer: UIView!
+    @IBOutlet private weak var chartViewContainer: UIView!
     private weak var embededChartViewController: UIViewController?
     
     override func viewDidLoad() {

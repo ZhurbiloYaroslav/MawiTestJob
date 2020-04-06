@@ -55,8 +55,8 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="376" height="91"/>
             <connections>
-                <outlet property="some1" destination="wzc-qd-YtU" id="g7E-Jb-y0H"/>
-                <outlet property="some2" destination="beD-KS-EdQ" id="P94-27-pWF"/>
+                <outlet property="measurementDateTimeLabel" destination="beD-KS-EdQ" id="P94-27-pWF"/>
+                <outlet property="measurementIdLabel" destination="wzc-qd-YtU" id="g7E-Jb-y0H"/>
             </connections>
             <point key="canvasLocation" x="368.11594202898556" y="132.25446428571428"/>
         </collectionViewCell>
