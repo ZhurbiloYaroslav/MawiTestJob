@@ -57,6 +57,7 @@
 		C4F92E95243A44A400657F5E /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E94243A44A400657F5E /* ChartViewController.swift */; };
 		C4F92E97243A44BB00657F5E /* ChartView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4F92E96243A44BB00657F5E /* ChartView.storyboard */; };
 		C4F92E99243A45A300657F5E /* ChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E98243A45A300657F5E /* ChartViewModel.swift */; };
+		C4F92E9B243AF47B00657F5E /* ChartViewDisplayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F92E9A243AF47A00657F5E /* ChartViewDisplayModel.swift */; };
 		C4FE93ED2438978E00F167B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE93EC2438978E00F167B9 /* AppDelegate.swift */; };
 		C4FE93F62438979400F167B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F52438979400F167B9 /* Assets.xcassets */; };
 		C4FE93F92438979400F167B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4FE93F72438979400F167B9 /* LaunchScreen.storyboard */; };
@@ -129,6 +130,7 @@
 		C4F92E94243A44A400657F5E /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		C4F92E96243A44BB00657F5E /* ChartView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ChartView.storyboard; sourceTree = "<group>"; };
 		C4F92E98243A45A300657F5E /* ChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewModel.swift; sourceTree = "<group>"; };
+		C4F92E9A243AF47A00657F5E /* ChartViewDisplayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewDisplayModel.swift; sourceTree = "<group>"; };
 		C4FE93E92438978E00F167B9 /* MawiTestJob.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MawiTestJob.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4FE93EC2438978E00F167B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4FE93F52438979400F167B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 			children = (
 				C4F92E98243A45A300657F5E /* ChartViewModel.swift */,
 				C4F92E94243A44A400657F5E /* ChartViewController.swift */,
+				C4F92E9A243AF47A00657F5E /* ChartViewDisplayModel.swift */,
 				C4F92E96243A44BB00657F5E /* ChartView.storyboard */,
 			);
 			path = ChartView;
@@ -703,6 +706,7 @@
 				C4F92E8A2439F40300657F5E /* UIView+setBorder.swift in Sources */,
 				C4F92E442438C9DA00657F5E /* UIViewController+presentable.swift in Sources */,
 				C4F92E5A2439E67400657F5E /* MeasurementListItemCell.swift in Sources */,
+				C4F92E9B243AF47B00657F5E /* ChartViewDisplayModel.swift in Sources */,
 				C4F92E272438A26600657F5E /* RootCoordinator.swift in Sources */,
 				C4F92E8C2439FD1D00657F5E /* BaseNavigationController.swift in Sources */,
 				C4F92E90243A398E00657F5E /* BaseViewModelInputsOutputs.swift in Sources */,

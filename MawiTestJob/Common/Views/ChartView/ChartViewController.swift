@@ -23,21 +23,34 @@ class ChartViewController: UIViewController {
     
     @IBOutlet private weak var lineChartView: LineChartView!
     
-        override func viewDidLoad() {
-            super.viewDidLoad()
-            
-            bindViewModel()
-            viewModel?.input.viewDidLoad.onNext(())
-        }
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        deinit {
-            viewModel?.input.viewWillDeinit.onNext(())
-        }
-        
-        private func bindViewModel() {
-            
-        }
+        bindViewModel()
+        viewModel?.input.viewDidLoad.onNext(())
     }
+    
+    deinit {
+        viewModel?.input.viewWillDeinit.onNext(())
+    }
+    
+    private func bindViewModel() {
+        
+        mockForTesting()
+    }
+    
+    /// Mock of the data for testing purposes
+    private func mockForTesting() {
+        let value1 = ChartDataEntry(x: 1, y: 10)
+        let value2 = ChartDataEntry(x: 2, y: 50)
+        let value3 = ChartDataEntry(x: 3, y: -10)
+        let value4 = ChartDataEntry(x: 4, y: -50)
+        let dataSet = LineChartDataSet(entries: [value1, value2, value3, value4], label: "Measurement data")
+        let data = LineChartData(dataSet: dataSet)
+        lineChartView.data = data
+    }
+    
+}
 
 extension ChartViewController: ChartViewControllerType {
     func inject(viewModel: ViewModelType) {

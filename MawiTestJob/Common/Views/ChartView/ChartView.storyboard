@@ -17,22 +17,14 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LSi-hj-gsR" customClass="LineChartView" customModule="Charts">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charts view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csO-o5-M7E">
-                                <rect key="frame" x="142" y="323" width="91" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="LSi-hj-gsR" firstAttribute="leading" secondItem="VkY-Bb-H8N" secondAttribute="leading" id="FKw-vF-pKo"/>
-                            <constraint firstItem="csO-o5-M7E" firstAttribute="centerY" secondItem="Osk-rS-fru" secondAttribute="centerY" id="SL0-5z-Lkx"/>
                             <constraint firstItem="VkY-Bb-H8N" firstAttribute="bottom" secondItem="LSi-hj-gsR" secondAttribute="bottom" id="XZq-RZ-BAA"/>
                             <constraint firstItem="VkY-Bb-H8N" firstAttribute="trailing" secondItem="LSi-hj-gsR" secondAttribute="trailing" id="cuf-MT-aFs"/>
-                            <constraint firstItem="csO-o5-M7E" firstAttribute="centerX" secondItem="Osk-rS-fru" secondAttribute="centerX" id="jjZ-Jo-7yS"/>
                             <constraint firstItem="LSi-hj-gsR" firstAttribute="top" secondItem="VkY-Bb-H8N" secondAttribute="top" id="vRt-Wt-94N"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VkY-Bb-H8N"/>
